@@ -55,6 +55,7 @@ object PersistentBankAccount {
   val eventHandler: (BankAccount, Event) => BankAccount = {
     case (state, BankAccountCreated(bankAccountCreated)) => bankAccountCreated
     case (state, BalanceUpdated(amount)) => state.copy(balance = state.balance + amount)
+    case (state, _) => state
   }
 
   def apply(id: String): Behavior[Command] =

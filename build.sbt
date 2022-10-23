@@ -13,7 +13,7 @@ lazy val root = project
   .settings(
     name         := "akka-cats-cassandra",
     version      := "0.1.0-SNAPSHOT",
-    scalaVersion := "2.13.8",
+    scalaVersion := "2.13.10",
     libraryDependencies ++= Seq(
       // akka
       "com.typesafe.akka" %% "akka-actor-typed"       % akkaVersion,
